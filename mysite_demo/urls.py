@@ -20,6 +20,9 @@ from login import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^index$', views.AllIndex),
+    url(r'^login/$', views.index),
     url(r'^login/', include('login.login_urls')),
     url(r'^polls/', include('polls.polls_urls')),
 ]
+
+
