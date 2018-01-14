@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from login import views
+from django.conf.urls import include
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -23,6 +24,7 @@ urlpatterns = [
     url(r'^login/$', views.index),
     url(r'^login/', include('login.login_urls')),
     url(r'^polls/', include('polls.polls_urls')),
+    url(r'^captcha', include('captcha.urls'))
 ]
 
 

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'login',
     'polls',
+    'captcha',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +122,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.126.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'zxy_auto_test@126.com'
+EMAIL_HOST_PASSWORD = 'jiaming.123'
